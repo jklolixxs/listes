@@ -2,6 +2,6 @@
 
 欢迎订阅通知频道
 
-https://t.me/Moriarty989
+https://t.me/ClashConfig
 
 好用的话请点一下Star~
