@@ -1,0 +1,12 @@
+# 内容：fast
+# 数量：1条
+DOMAIN-SUFFIX,fast.com
+
+# 内容：speedtest
+# 数量：2条
+DOMAIN-KEYWORD,speedtest
+DOMAIN-SUFFIX,ooklaserver.net
+
+# 内容：cloudflare
+# 数量：1条
+DOMAIN-SUFFIX,speed.cloudflare.com
