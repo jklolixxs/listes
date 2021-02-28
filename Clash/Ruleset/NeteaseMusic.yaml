@@ -1,0 +1,70 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enable: true
+  listen: 0.0.0.0:5353
+  enhanced-mode: fake-ip
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+    - 1.0.0.1
+    - 8.8.4.4
+proxies:
+- name: "网易云解锁"
+  type: ss
+  server: music.desperadoj.com
+  port: 30001
+  cipher: aes-128-gcm
+  password: desperadoj.com_free_proxy_emx2
+proxy-groups:
+- name: Netease Music
+  type: select
+  proxies:
+  - 网易云解锁
+  - DIRECT
+  - 解锁由如风提供
+  - 低调使用
+rules:
+ - DOMAIN-SUFFIX,163yun.com,Netease Music
+ - DOMAIN-SUFFIX,api.iplay.163.com,Netease Music
+ - DOMAIN-SUFFIX,hz.netease.com,Netease Music
+ - DOMAIN-SUFFIX,mam.netease.com,Netease Music
+ - DOMAIN-SUFFIX,music.163.com,Netease Music
+ - DOMAIN-SUFFIX,music.163.com.163jiasu.com,Netease Music
+ - IP-CIDR,39.105.63.80/32,Netease Music,no-resolve
+ - IP-CIDR,39.105.175.128/32,Netease Music,no-resolve
+ - IP-CIDR,45.254.48.1/32,Netease Music,no-resolve
+ - IP-CIDR,47.100.127.239/32,Netease Music,no-resolve
+ - IP-CIDR,59.111.21.14/31,Netease Music,no-resolve
+ - IP-CIDR,59.111.160.195/32,Netease Music,no-resolve
+ - IP-CIDR,59.111.160.197/32,Netease Music,no-resolve
+ - IP-CIDR,59.111.179.214/32,Netease Music,no-resolve
+ - IP-CIDR,59.111.181.35/32,Netease Music,no-resolve
+ - IP-CIDR,59.111.181.38/32,Netease Music,no-resolve
+ - IP-CIDR,59.111.181.60/32,Netease Music,no-resolve
+ - IP-CIDR,59.111.238.29/32,Netease Music,no-resolve
+ - IP-CIDR,101.71.154.241/32,Netease Music,no-resolve
+ - IP-CIDR,103.126.92.132/31,Netease Music,no-resolve
+ - IP-CIDR,103.126.92.132/32,Netease Music,no-resolve
+ - IP-CIDR,103.126.92.133/32,Netease Music,no-resolve
+ - IP-CIDR,112.13.119.17/32,Netease Music,no-resolve
+ - IP-CIDR,112.13.119.18/32,Netease Music,no-resolve
+ - IP-CIDR,112.13.122.1/32,Netease Music,no-resolve
+ - IP-CIDR,112.13.122.4/32,Netease Music,no-resolve
+ - IP-CIDR,115.236.118.33/32,Netease Music,no-resolve
+ - IP-CIDR,115.236.121.1/32,Netease Music,no-resolve
+ - IP-CIDR,118.24.63.156/32,Netease Music,no-resolve
+ - IP-CIDR,182.92.170.253/32,Netease Music,no-resolve
+ - IP-CIDR,193.112.159.225/32,Netease Music,no-resolve
+ - IP-CIDR,223.252.199.66/31,Netease Music,no-resolve
+ - IP-CIDR,223.252.199.66/32,Netease Music,no-resolve
+ - IP-CIDR,223.252.199.67/32,Netease Music,no-resolve
+ # Netease Music Advertising
+ - DOMAIN,admusicpic.music.126.net,REJECT
+ - DOMAIN,iadmat.nosdn.127.net,REJECT
+ - DOMAIN,iadmusicmat.music.126.net,REJECT
+ - DOMAIN,iadmusicmatvideo.music.126.net,REJECT
