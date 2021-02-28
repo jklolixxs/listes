@@ -20,6 +20,14 @@ proxies:
   port: 30001
   cipher: aes-128-gcm
   password: desperadoj.com_free_proxy_emx2
+- name: "解锁由如风提供"
+  type: http
+  server: 127.0.0.1
+  port: 1270
+- name: "请低调使用"
+  type: http
+  server: 127.0.0.1
+  port: 1270
 proxy-groups:
 - name: Netease Music
   type: select
@@ -27,7 +35,7 @@ proxy-groups:
   - 网易云解锁
   - DIRECT
   - 解锁由如风提供
-  - 低调使用
+  - 请低调使用
 rules:
  - DOMAIN-SUFFIX,163yun.com,Netease Music
  - DOMAIN-SUFFIX,api.iplay.163.com,Netease Music
