@@ -1,0 +1,19 @@
+#For Apper
+[custom]
+
+ruleset=Stream,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=StreamSE,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+ruleset=Proxy,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+ruleset=DIRECT,[]GEOIP,CN
+ruleset=Final,https://raw.githubusercontent.com/jklolixxs/listes/master/Clash/Ruleset/PlusEmbyProxy.ini
+ruleset=Final,[]FINAL
+
+custom_proxy_group=Proxy`select`[]Hong Kong`[]Taiwan`[]Singapore`[]Japan`[]🇺United States`[]DIRECT
+custom_proxy_group=Stream`select`[]Hong Kong`[]Taiwan`[]Singapore`[]Japan`[]🇺United States`[]DIRECT
+custom_proxy_group=StreamSE`select`[]DIRECT`[]Hong Kong`[]Taiwan`[]Singapore`[]Japan`[]🇺United States
+custom_proxy_group=Final`select`[]Hong Kong`[]Taiwan`[]Singapore`[]Japan`[]🇺United States`[]DIRECT
+custom_proxy_group=Hong Kong`select`(HK|HKG|HKT|Hong KongG|香港|港)`
+custom_proxy_group=Singapore`select`(SG|SGP|Singapore|新加坡|新|狮城|狮)`
+custom_proxy_group=Taiwan`select`(TW|TWN|TPE|TaiwanN|台湾|台)`
+custom_proxy_group=Japan`select`(JP|JPN|JapanN|日本|日)`
+custom_proxy_group=United States`select`(US|USA|United States|美国|美)`
